@@ -1,0 +1,235 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #b0e0e6, #f4f4f4);
+}
+
+.username-container, .chat-container {
+    width: 100%;
+    max-width: 600px; /* Max width for larger screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+.username-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.username-container input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.username-container input:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+.username-container button {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.username-container button:hover {
+    background-color: #0056b3;
+}
+
+.chat-container {
+    height: 80vh; /* Responsive height */
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-box {
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.avatar {
+    width: 50px; /* Responsive width */
+    height: 50px; /* Responsive height */
+    border-radius: 50%;
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px; /* Responsive margin */
+    font-size: 20px; /* Responsive font size */
+    font-weight: bold;
+}
+
+.bubble {
+    max-width: 90%; /* Adjusted max-width */
+    padding: 10px; /* Responsive padding */
+    border-radius: 15px;
+    background-color: #e9e9e9;
+    position: relative;
+    word-wrap: break-word;
+    font-size: 16px; /* Responsive font size */
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -10px; /* Adjusted for responsive design */
+    width: 0;
+    height: 0;
+    border-top: 10px solid #e9e9e9; /* Adjusted for responsive design */
+    border-right: 10px solid transparent; /* Adjusted for responsive design */
+}
+
+.timestamp {
+    font-size: 12px; /* Responsive font size */
+    color: #888;
+    margin-top: 5px;
+}
+
+.chat-input {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px; /* Adjusted padding */
+    margin-top: auto;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px; /* Responsive padding */
+    border: 1px solid #ffffff;
+    border-radius: 8px 0 0 8px;
+    font-size: 16px; /* Responsive font size */
+    box-sizing: border-box;
+}
+
+#message-input:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+#send-button {
+    padding: 10px; /* Responsive padding */
+    border: 1px solid #ccc;
+    border-left: 0;
+    border-radius: 0 8px 8px 0;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px; /* Responsive font size */
+    box-sizing: border-box;
+}
+
+#send-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .username-container, .chat-container {
+        padding: 15px;
+    }
+
+    .username-container h2 {
+        font-size: 20px;
+    }
+
+    .username-container input {
+        font-size: 16px;
+    }
+
+    .username-container button {
+        font-size: 16px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .bubble {
+        font-size: 14px;
+    }
+
+    #message-input {
+        font-size: 14px;
+    }
+
+    #send-button {
+        font-size: 14px;
+    }
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 480px) {
+    .username-container, .chat-container {
+        padding: 10px;
+    }
+
+    .username-container h2 {
+        font-size: 18px;
+    }
+
+    .username-container input {
+        font-size: 14px;
+    }
+
+    .username-container button {
+        font-size: 14px;
+    }
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .bubble {
+        font-size: 12px;
+    }
+
+    #message-input {
+        font-size: 12px;
+    }
+
+    #send-button {
+        font-size: 12px;
+    }
+}
